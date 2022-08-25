@@ -1,0 +1,5 @@
+&bands
+    prefix = "MoS2"
+    outdir = "./out"
+    filband = "MoS2.bands.dat"
+/

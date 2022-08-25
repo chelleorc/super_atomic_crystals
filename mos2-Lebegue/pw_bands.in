@@ -1,0 +1,36 @@
+&CONTROL
+  calculation = 'bands'
+  outdir = './out/'
+  prefix = 'MoS2'
+  pseudo_dir = './pseudo/'
+/
+&SYSTEM
+  ecutrho =   4.0000000000d+02
+  ecutwfc =  45.0
+  ibrav = 4
+  nat = 3
+  ntyp = 2
+  a = 3.16
+  c = 20.000
+  nbnd = 45
+  occupations = 'fixed'
+
+/
+&ELECTRONS
+  conv_thr =   1.0000000000d-10
+  mixing_beta = 0.1
+/
+
+ATOMIC_SPECIES
+Mo     95.96 Mo.pbe-spn-kjpaw_psl.1.0.0.UPF
+S      32.065 S.pbe-n-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS crystal
+Mo           -0.0000000000       -0.0000000000        0.2500000000
+S             0.3333333300        0.6666666700        0.3286104484
+S             0.3333333400        0.6666666700        0.1713895516
+K_POINTS (crystal_b)
+4
+0.00000 0.00000 0.00000 50  !G
+0.50000 0.00000 0.00000 50  !M
+0.33333 0.33333 0.00000 50  !K
+0.00000 0.00000 0.00000 50  !G

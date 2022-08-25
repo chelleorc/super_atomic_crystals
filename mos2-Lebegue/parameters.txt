@@ -1,0 +1,35 @@
+Electronic structure of two-dimensional crystal from ab initio theory
+S. Lebegue ad O. Eriksson
+
+## System of Study ##
+MoS2 - semiconductor
+P6/mmc bulk system - 2 Mo and 4 S
+lattice constant (a) = 3.16 Angstroms
+                 (c) = 20.0 Angstroms (I set this to remove van der wall interactions)
+
+## Mathematical Method ##
+DFT
+Spin coupling not included since layers are separated
+
+## Pseudopotential ##
+Ultrasoft PAW
+exchange-correlation - PBE (and LDA)
+Mo     95.96 Mo.pbe-spn-kjpaw_psl.1.0.0.UPF
+S      32.065 S.pbe-n-kjpaw_psl.1.0.0.UPF
+
+## Software ##
+# High Performance Computing Core #
+Calculated on HPC core using 20 cores
+gcc/10.3.0 intel-mkl/2020.4.304 openmpi/4.0.7 python/3.9 cmake
+
+# Quantum Espresso #
+export ESPRESSO_PSEUDO=/mnt/home/landerson1/apps/q-e/pseudo
+export PATH=~/apps/q-e/build/bin/:$PATH
+
+## Work Flow ##
+SCF
+NSCF
+Bands
+Bands post-processing (pp)
+# grep 'high-symmetry' bands_pp.out
+Input high-symmetry values in band_structure_plot.py script
