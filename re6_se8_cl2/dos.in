@@ -1,0 +1,5 @@
+&DOS
+ prefix= 'Re6Se8Cl2',
+ outdir= '/mnt/home/landerson1/ceph/projects/quantum_espresso/super_atomic_crystals/re6_se8_cl2/out',
+ fildos= 'Re6Se8Cl2_dos.dat'
+/

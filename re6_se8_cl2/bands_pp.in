@@ -1,0 +1,5 @@
+&bands
+    prefix = "Re6Se8Cl2"
+    outdir = "./out"
+    filband = "_dat/Re6Se8Cl2.bands.dat"
+/
