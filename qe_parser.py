@@ -12,7 +12,6 @@ import subprocess as sp
 
 
 
-high_symmetry_points = []
 
 
 '''
@@ -27,13 +26,13 @@ def read_file(file_path):
 Extracts high symmetry points from band structure data
 '''
 def high_symmetry(file_path,keyword):
+    high_symmetry_points = []
     band_structure_data = read_file(file_path)
     for line_number, line in enumerate(band_structure_data):
         if keyword in line:
             line_split = list(line.split(" "))
             high_symmetry_points.append(float(line_split[-1]))
     return high_symmetry_points
-
 
 '''
 Restructure band structure data to make them readable for plotting
@@ -51,7 +50,6 @@ def plot_bands(band_structure_data):
         plt.plot(k, bands[band, :], linewidth=1, alpha=0.5, color='k')
     plt.xlim(min(k), max(k))
 
-    
 
 '''
 Plot kpath based on high symmetry points
